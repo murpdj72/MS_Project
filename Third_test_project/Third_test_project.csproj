@@ -8,6 +8,20 @@
 
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.4</SupportedOSPlatformVersion>
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">31.0</SupportedOSPlatformVersion>
+		<Configurations>Debug;Release;FullSource</Configurations>
+	</PropertyGroup>
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' " />
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' " />
+	<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'FullSource|AnyCPU' ">
+		<IntermediateOutputPath>obj\FullSource</IntermediateOutputPath>
+		<DebugType></DebugType>
+		<Optimize>false</Optimize>
+		<OutputPath>bin\FullSource</OutputPath>
+		<DefineConstants></DefineConstants>
+		<WarningLevel>4</WarningLevel>
+		<DocumentationFile></DocumentationFile>
+		<NoWarn></NoWarn>
+		<NoStdLib>true</NoStdLib>
 	</PropertyGroup>
 	<Choose>
 		<When Condition="'$(Configuration)'=='FullSource'">
