@@ -17,7 +17,7 @@
 		</When>
 		<Otherwise>
 			<ItemGroup>
-			  <ProjectReference Include="..\Second_test_solution\MS_Test_Solution.csproj" />
+			  <ProjectReference Include="..\MS_Test_Solution\MS_Test_Solution.csproj" />
 			</ItemGroup>
 		</Otherwise>
 	</Choose>
